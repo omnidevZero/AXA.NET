@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWAPI", "SWAPI\SWAPI.csproj", "{7900FB9F-AF80-4828-910F-18C703CF3DBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selenium", "Selenium\Selenium.csproj", "{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Chrome|Any CPU = Chrome|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Firefox|Any CPU = Firefox|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Chrome|Any CPU.ActiveCfg = Release|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Chrome|Any CPU.Build.0 = Release|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Firefox|Any CPU.ActiveCfg = Release|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Firefox|Any CPU.Build.0 = Release|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7900FB9F-AF80-4828-910F-18C703CF3DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Chrome|Any CPU.ActiveCfg = Chrome|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Chrome|Any CPU.Build.0 = Chrome|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Firefox|Any CPU.ActiveCfg = Firefox|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Firefox|Any CPU.Build.0 = Firefox|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74764B57-FBC3-4C0A-B49D-4DC7BA6B02F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98B94C3B-D966-4248-8B97-AB6D4E4C23E5}
+	EndGlobalSection
+EndGlobal
