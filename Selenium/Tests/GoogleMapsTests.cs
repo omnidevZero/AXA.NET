@@ -1,19 +1,17 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using Selenium.Pages;
-using System.Reflection;
+﻿using Selenium.Pages;
+using Selenium.Tests;
 using Xunit;
 
 namespace Selenium.test
 {
-    public class GoogleMapsTests
+    public class GoogleMapsTests : TestBase
     {
         private string gmapsUrl = "https://www.google.pl/maps/";
+        //public new IWebDriver? driver;
 
         [Fact]
         public void CheckDistance()
         {
-            using IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl(gmapsUrl);
 
             Consent consent = new Consent(driver);

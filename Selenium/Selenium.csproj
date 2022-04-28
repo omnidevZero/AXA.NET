@@ -8,14 +8,19 @@
     <Configurations>Debug;Release;Chrome;Firefox</Configurations>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+	<AppConfig>App.Debug.config</AppConfig>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Chrome|AnyCPU'">
     <Optimize>True</Optimize>
-	<Browser>Chrome</Browser>
+	<AppConfig>App.Chrome.config</AppConfig>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Firefox|AnyCPU'">
     <Optimize>True</Optimize>
-	<Browser>Firefox</Browser>
+	<AppConfig>App.Firefox.config</AppConfig>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +29,7 @@
     <PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="101.0.4951.4100" />
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.31.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
@@ -31,4 +37,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" SourceFiles="App.Debug.config" DestinationFiles="$(OutDir)\testhost.dll.config" />
+	<Copy Condition="'$(Configuration)|$(Platform)'=='Chrome|AnyCPU'" SourceFiles="App.Chrome.config" DestinationFiles="$(OutDir)\testhost.dll.config" />
+    <Copy Condition="'$(Configuration)|$(Platform)'=='Firefox|AnyCPU'" SourceFiles="App.Firefox.config" DestinationFiles="$(OutDir)\testhost.dll.config" />
+  </Target>
 </Project>
