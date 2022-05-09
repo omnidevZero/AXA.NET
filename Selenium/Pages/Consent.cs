@@ -14,9 +14,13 @@ namespace Selenium.Pages
 
         public void AcceptTerms()
         {
-            driver.FindElement(By.CssSelector(AcceptButton)).Click();
+            var acceptButton = driver.FindElements(By.CssSelector(AcceptButton));
+            if (acceptButton.Count() > 0)
+            {
+                acceptButton[0].Click();
+            }
         }
 
-        private static readonly string AcceptButton = "div > form";
+        private static readonly string AcceptButton = "#change-me-when-google-adds-consent-page-back";
     }
 }

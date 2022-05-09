@@ -7,7 +7,6 @@ namespace Selenium.test
     public class GoogleMapsTests : TestBase
     {
         private string gmapsUrl = "https://www.google.pl/maps/";
-        //public new IWebDriver? driver;
 
         [Fact]
         public void CheckDistance()
